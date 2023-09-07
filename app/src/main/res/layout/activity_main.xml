@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background2"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_170"
+            android:layout_marginBottom="@dimen/dim_10"
+            app:lottie_rawRes="@raw/loginpage" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:src="@drawable/bjp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dim_100">
+                </ImageView>
+
+
+
+                <TextView
+
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="Narendra Modi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:id="@+id/userphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="BJP"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bjp"
+                    android:layout_width="@dimen/dim_250"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VOTE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:src="@drawable/aap"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dim_100">
+                </ImageView>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="Arvind Kejriwal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="AAP"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/aap"
+                    android:layout_width="@dimen/dim_250"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VOTE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:src="@drawable/bsp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dim_100">
+                </ImageView>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="Mayawati"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="BSP"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/dim_250"
+                    android:id="@+id/bsp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VOTE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim_300"
+            android:id="@+id/congress"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:src="@drawable/congresss"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dim_100">
+                </ImageView>
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="Rahul Gandhi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="INC"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/dim_250"
+                    android:id="@+id/INC"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VOTE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dim_300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="@dimen/dim_30"
+            android:backgroundTint="#009688"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="@dimen/dim_15"
+                    android:src="@drawable/cpiindia"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/dim_100">
+                </ImageView>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="Sitaram Yechury"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    android:text="CPI"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp">
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/dim_250"
+                    android:id="@+id/CPI"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/dim_15"
+                    app:cardBackgroundColor="#E91E63"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VOTE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView>

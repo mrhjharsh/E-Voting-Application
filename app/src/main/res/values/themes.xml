@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EvotingApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.EvotingApplication" parent="Base.Theme.EvotingApplication" />
+    <style name="dark_theme" parent="Theme.MaterialComponents.Light">
+        <!-- Other style attributes -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="MyTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+
+    <style name="MyTextInputEditText" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+
+</resources>
