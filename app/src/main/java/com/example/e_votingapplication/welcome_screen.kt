@@ -32,19 +32,22 @@ class welcome_screen : AppCompatActivity() {
             doubleBackToExitPressedOnce = false
         }, 2000)
     }
+
     private val authenticationCallback: BiometricPrompt.AuthenticationCallback
         get() = @RequiresApi(Build.VERSION_CODES.P)
         object : BiometricPrompt.AuthenticationCallback() {
 
             override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
                 super.onAuthenticationError(errorCode, errString)
-                if(errString.toString().startsWith("Too many " , true))notifyUser("Authentication Error : $errString", 0)
-               else notifyUser("Authentication Error : $errString", 0)
+                if (errString.toString()
+                        .startsWith("Too many ", true)
+                ) notifyUser("Authentication Error : $errString", 0)
+                else notifyUser("Authentication Error : $errString", 0)
             }
 
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
                 super.onAuthenticationSucceeded(result)
-                notifyUser("Authentication Succeeded" , 1)
+                notifyUser("Authentication Succeeded", 1)
             }
         }
 
@@ -66,7 +69,7 @@ class welcome_screen : AppCompatActivity() {
                     "Cancel",
                     this.mainExecutor,
                     DialogInterface.OnClickListener { dialog, which ->
-                        notifyUser("Authentication Cancelled",0)
+                        notifyUser("Authentication Cancelled", 0)
                     }).build()
             biometricPrompt.authenticate(
                 getCancellationSignal(),
@@ -79,15 +82,16 @@ class welcome_screen : AppCompatActivity() {
     private fun getCancellationSignal(): CancellationSignal {
         cancellationSignal = CancellationSignal()
         cancellationSignal?.setOnCancelListener {
-            notifyUser("Authentication was Cancelled by the user",0)
+            notifyUser("Authentication was Cancelled by the user", 0)
         }
         return cancellationSignal as CancellationSignal
     }
+
     @RequiresApi(Build.VERSION_CODES.M)
     private fun checkBiometricSupport(): Boolean {
         val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
         if (!keyguardManager.isDeviceSecure) {
-            notifyUser("Fingerprint authentication has not been enabled in settings",1)
+            notifyUser("Fingerprint authentication has not been enabled in settings", 1)
             return false
         }
         if (ActivityCompat.checkSelfPermission(
@@ -95,19 +99,20 @@ class welcome_screen : AppCompatActivity() {
                 android.Manifest.permission.USE_BIOMETRIC
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            notifyUser("Fingerprint Authentication Permission is not enabled",1)
+            notifyUser("Fingerprint Authentication Permission is not enabled", 1)
             return false
         }
         return if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {
             true
         } else true
     }
-    private fun notifyUser(message: String , i:Int) {
+
+    private fun notifyUser(message: String, i: Int) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-      if(i == 1)  {
-          finish()
-          startActivity(Intent(this , detech_face::class.java))
-      }
+        if (i == 1) {
+            finish()
+            startActivity(Intent(this, detech_face::class.java))
+        }
     }
 
 

@@ -27,6 +27,7 @@ class login_page : AppCompatActivity() {
             doubleBackToExitPressedOnce = false
         }, 2000)
     }
+
     companion object {
         var username: String = ""
         var usernumber: String = ""
@@ -53,12 +54,14 @@ class login_page : AppCompatActivity() {
         var login: CardView = findViewById(R.id.login);
         login.setOnClickListener {
             var c = 0
-            if (email.text.toString().equals("admin@gmail.com") && password.text.toString().equals("admin")) {
+            if (email.text.toString().equals("admin@gmail.com") && password.text.toString()
+                    .equals("admin")
+            ) {
                 c = 1
                 Handler().postDelayed({
                     startActivity(Intent(applicationContext, admin_activity::class.java))
                     finish()
-                },1000)
+                }, 1000)
                 Toast.makeText(this, "Admin Login Successful", Toast.LENGTH_SHORT).show()
             }
 
@@ -72,7 +75,7 @@ class login_page : AppCompatActivity() {
                     cutted_email += i
                 }
                 var e = cutted_email
-               ce = cutted_email
+                ce = cutted_email
 
                 for (i in 0 until databaseclass.email.size) {
                     if (e.trim().equals(databaseclass.email.get(i)) && p.trim()

@@ -8,6 +8,5 @@ class dialogbox : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialogbox)
         supportActionBar?.hide()
-
     }
 }

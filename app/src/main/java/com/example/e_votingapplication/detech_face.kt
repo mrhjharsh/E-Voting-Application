@@ -27,6 +27,7 @@ class detech_face : AppCompatActivity() {
     companion object {
         private const val REQUEST_IMAGE_CAPTURE = 1
     }
+
     private var doubleBackToExitPressedOnce = false
 
     override fun onBackPressed() {
@@ -56,7 +57,9 @@ class detech_face : AppCompatActivity() {
         button.setOnClickListener {
             dispatchTakePictureIntent()
         }
+
     }
+
     private fun dispatchTakePictureIntent() {
         val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
@@ -96,15 +99,12 @@ class detech_face : AppCompatActivity() {
                         if (faces.size >= 1) {
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
-                            Toast.makeText(this, "Face Verification Successful", Toast.LENGTH_SHORT).show()
-                        }
-                        else{
+                            Toast.makeText(this, "Face Verification Successful", Toast.LENGTH_SHORT)
+                                .show()
+                        } else {
                             Toast.makeText(this, "Please Try Again", Toast.LENGTH_SHORT).show()
                         }
-                    },1000)
-
-
-
+                    }, 1000)
                 }
                 .addOnFailureListener { e ->
                     Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT).show()

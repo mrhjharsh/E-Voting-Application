@@ -20,9 +20,10 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
-    companion object{
+    companion object {
         var totalvote: Int = 0
     }
+
     var party: Int = 0
     var bjpv: Int = 0
     var aapv: Int = 0
@@ -46,13 +47,13 @@ class MainActivity : AppCompatActivity() {
         activityManager.appTasks.forEach { it.finishAndRemoveTask() }
         context.startActivity(mainIntent)
     }
+
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            if(vote == 1){
-                startActivity(Intent(this , splash::class.java))
+            if (vote == 1) {
+                startActivity(Intent(this, splash::class.java))
                 finish()
-            }
-            else finish()
+            } else finish()
         }
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "Press back again", Toast.LENGTH_SHORT).show()
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                     totalvote =
                         dataSnapshot.child("Totalvote").getValue(String::class.java).toString()
                             .toInt()
-                    perv =  dataSnapshot.child(login_page.ce).getValue(String::class.java).toString()
+                    perv = dataSnapshot.child(login_page.ce).getValue(String::class.java).toString()
                     bjpv = dataSnapshot.child("bjp").getValue(String::class.java).toString().toInt()
                     aapv = dataSnapshot.child("aap").getValue(String::class.java).toString().toInt()
                     cpiv = dataSnapshot.child("cpi").getValue(String::class.java).toString().toInt()
@@ -156,7 +157,7 @@ class MainActivity : AppCompatActivity() {
 
         val builder = AlertDialog.Builder(this)
         builder.setView(dialogView)
-            .setPositiveButton("BACK") {dialog, _ ->
+            .setPositiveButton("BACK") { dialog, _ ->
                 // Handle positive button click
                 dialog.cancel()
             }
@@ -183,7 +184,12 @@ class MainActivity : AppCompatActivity() {
 
                     login_page.status = "1"
                     myRef.child(login_page.ce.toString())
-                        .setValue(perv.substring(0,perv.length-3)+"1"+perv.substring(perv.length-2 , perv.length))
+                        .setValue(
+                            perv.substring(
+                                0,
+                                perv.length - 3
+                            ) + "1" + perv.substring(perv.length - 2, perv.length)
+                        )
                         .addOnFailureListener {
 //                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
 //                                .show()
@@ -206,7 +212,12 @@ class MainActivity : AppCompatActivity() {
 
                     login_page.status = "1"
                     myRef.child(login_page.ce.toString())
-                        .setValue(perv.substring(0,perv.length-3)+"1"+perv.substring(perv.length-2 , perv.length))
+                        .setValue(
+                            perv.substring(
+                                0,
+                                perv.length - 3
+                            ) + "1" + perv.substring(perv.length - 2, perv.length)
+                        )
                         .addOnFailureListener {
 //                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
 //                                .show()
@@ -229,7 +240,12 @@ class MainActivity : AppCompatActivity() {
 
                     login_page.status = "1"
                     myRef.child(login_page.ce.toString())
-                        .setValue(perv.substring(0,perv.length-3)+"1"+perv.substring(perv.length-2 , perv.length))
+                        .setValue(
+                            perv.substring(
+                                0,
+                                perv.length - 3
+                            ) + "1" + perv.substring(perv.length - 2, perv.length)
+                        )
                         .addOnFailureListener {
 //                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
 //                                .show()
@@ -251,7 +267,12 @@ class MainActivity : AppCompatActivity() {
 
                     login_page.status = "1"
                     myRef.child(login_page.ce.toString())
-                        .setValue(perv.substring(0,perv.length-3)+"1"+perv.substring(perv.length-2 , perv.length))
+                        .setValue(
+                            perv.substring(
+                                0,
+                                perv.length - 3
+                            ) + "1" + perv.substring(perv.length - 2, perv.length)
+                        )
                         .addOnFailureListener {
 //                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
 //                                .show()
@@ -273,7 +294,12 @@ class MainActivity : AppCompatActivity() {
 
                     login_page.status = "1"
                     myRef.child(login_page.ce.toString())
-                        .setValue(perv.substring(0,perv.length-3)+"1"+perv.substring(perv.length-2 , perv.length))
+                        .setValue(
+                            perv.substring(
+                                0,
+                                perv.length - 3
+                            ) + "1" + perv.substring(perv.length - 2, perv.length)
+                        )
                         .addOnFailureListener {
 //                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
 //                                .show()

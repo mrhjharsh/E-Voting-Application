@@ -13,8 +13,9 @@ import com.google.firebase.database.FirebaseDatabase
 class signup_page : AppCompatActivity() {
 
     override fun onBackPressed() {
-    finish()
+        finish()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_page)
@@ -27,7 +28,8 @@ class signup_page : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
         var name: TextInputEditText = findViewById<TextInputEditText>(R.id.name)
         var password: TextInputEditText = findViewById<TextInputEditText>(R.id.password)
-        var confirm_passowrd: TextInputEditText =findViewById<TextInputEditText>(R.id.confirm_password)
+        var confirm_passowrd: TextInputEditText =
+            findViewById<TextInputEditText>(R.id.confirm_password)
         var email: TextInputEditText = findViewById<TextInputEditText>(R.id.email)
         var mobile: TextInputEditText = findViewById<TextInputEditText>(R.id.mobile)
         var signup: CardView = findViewById(R.id.signup)
@@ -38,10 +40,9 @@ class signup_page : AppCompatActivity() {
             ) {
                 Toast.makeText(this, "Fill All Column", Toast.LENGTH_SHORT).show()
             } else {
-                if(!confirm_passowrd.text.toString().equals(password.text.toString())){
+                if (!confirm_passowrd.text.toString().equals(password.text.toString())) {
                     Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show()
-                }
-                else{
+                } else {
                     val database = FirebaseDatabase.getInstance()
                     val myRef = database.getReference("e-voting application database")
                     var cutted_email: String = ""
@@ -52,15 +53,17 @@ class signup_page : AppCompatActivity() {
                     myRef.child(cutted_email.toString())
                         .setValue(
                             password.text.toString().trim() + ", " + name.text.toString()
-                                .trim() + ", " + mobile.text.toString().trim()+ ", " + "0".toString().trim()+ ", "
+                                .trim() + ", " + mobile.text.toString()
+                                .trim() + ", " + "0".toString().trim() + ", "
                         )
                         .addOnFailureListener {
-                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Something Went Wrong !", Toast.LENGTH_SHORT)
+                                .show()
                         }.addOnSuccessListener {
                             Handler().postDelayed({
                                 finish()
-                               // startActivity(Intent(this@signup_page , login_page::class.java))
-                            },500)
+                                // startActivity(Intent(this@signup_page , login_page::class.java))
+                            }, 500)
                             Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
                         }
                 }

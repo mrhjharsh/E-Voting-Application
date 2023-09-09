@@ -11,6 +11,7 @@ class offline_splash : AppCompatActivity() {
     companion object {
         private const val REQUEST_IMAGE_CAPTURE = 1
     }
+
     private var doubleBackToExitPressedOnce = false
 
     override fun onBackPressed() {
@@ -26,6 +27,7 @@ class offline_splash : AppCompatActivity() {
             doubleBackToExitPressedOnce = false
         }, 2000)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_offline_splash)

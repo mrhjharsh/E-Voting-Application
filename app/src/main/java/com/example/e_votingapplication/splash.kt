@@ -88,7 +88,7 @@ class splash : AppCompatActivity() {
         myRef3.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    for (i in dataSnapshot.children){
+                    for (i in dataSnapshot.children) {
                         databaseclass.voter_name.add(i.key.toString())
                         databaseclass.voter_party.add(i.value.toString())
                     }
@@ -106,15 +106,6 @@ class splash : AppCompatActivity() {
         })
 
 
-
-
-
-
-
-
-
-
-
         val database = Firebase.database
         val myRef = database.getReference("e-voting application database")
         myRef.addValueEventListener(object : ValueEventListener {
@@ -126,7 +117,8 @@ class splash : AppCompatActivity() {
                                 .equals("aap") ||
                             i.key.toString().equals("bjp") || i.key.toString().equals("cpi") ||
                             i.key.toString().equals("inc") ||
-                            i.key.toString().equals("bsp")|| i.key.toString().equals("aadhar_id_vote")
+                            i.key.toString().equals("bsp") || i.key.toString()
+                                .equals("aadhar_id_vote")
                         ) {
                         } else {
                             databaseclass.email.add(i.key.toString())

@@ -12,6 +12,4 @@ public class databaseclass {
     public static List<String> status = new ArrayList<>();
     public static LinkedHashSet<String> voter_name = new LinkedHashSet<>();
     public static List<String> voter_party = new ArrayList<>();
-
-
 }

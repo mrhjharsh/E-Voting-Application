@@ -7,27 +7,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class custom_adapter : RecyclerView.Adapter<ViewHolder>{
+class custom_adapter : RecyclerView.Adapter<ViewHolder> {
 
-var unf : List<String> = ArrayList()
-var upf : List<String> = ArrayList()
+    var unf: List<String> = ArrayList()
+    var upf: List<String> = ArrayList()
 
-
-    constructor(){
-
-       unf = ArrayList(databaseclass.voter_name)
-        upf= ArrayList(databaseclass.voter_party)
+    constructor() {
+        unf = ArrayList(databaseclass.voter_name)
+        upf = ArrayList(databaseclass.voter_party)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.activity_custom_adapter, parent, false)
+        val v: View = LayoutInflater.from(parent.context).inflate(R.layout.activity_custom_adapter, parent, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        // Check if the ViewHolder is an instance of your custom ViewHolder
-
         if (holder is ViewHolder) {
             holder.username.text = unf[position]
             holder.party.text = upf[position]
@@ -43,7 +38,4 @@ var upf : List<String> = ArrayList()
         var username: TextView = view.findViewById(R.id.username)
         var party: TextView = view.findViewById(R.id.party)
     }
-
-
-
 }
